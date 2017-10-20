@@ -1,0 +1,19 @@
+@import "mixin.styl"
+
+ul
+  display: flex
+  width: 300px
+  justify-content: center
+  .item
+    flex: 1
+    line-height: 30px
+    text-align: center
+    height: 30px
+    cursor: pointer
+    no-wrap()
+    extend-click()
+    &:nth-child(2n)
+      background: rgba(0, 0, 0, .1)
+    &:nth-child(2n+1)
+      background: rgba(0, 0, 0, .3)
+

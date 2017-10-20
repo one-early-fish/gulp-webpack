@@ -1,0 +1,47 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+ul .item {
+  position: relative;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ul .item:after {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+ul .item:nth-child(2n) {
+  background: #000000;
+  background: rgba(0,0,0,0.1);
+}
+ul .item:nth-child(2n+1) {
+  background: #000000;
+  background: rgba(0,0,0,0.3);
+}
